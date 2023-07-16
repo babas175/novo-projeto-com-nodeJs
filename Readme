@@ -1,0 +1,17 @@
+Desafio Coodesh - API de Gerenciamento de Produtos
+Descrição
+Este projeto é uma API de gerenciamento de produtos, que permite realizar operações como recuperar informações de produtos por código, atualizar detalhes de produtos existentes, excluir produtos e listar todos os produtos cadastrados.
+
+Tecnologias Utilizadas
+  -Node.js
+  -Express.js
+  -MongoDB
+  -Mongoose
+  -Chai e Chai-Http (para testes)
+  -Sinon (para testes)
+
+Endpoints da API
+A documentação completa da API com os endpoints disponíveis está disponível no Swagger.
+
+Referência
+Este projeto é um desafio do Coodesh. Você pode encontrar o desafio original aqui.
