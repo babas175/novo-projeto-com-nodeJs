@@ -10,8 +10,14 @@ Tecnologias Utilizadas
   -Chai e Chai-Http (para testes)
   -Sinon (para testes)
 
+Instalação e Uso
+git clone  https://github.com/babas175/novo-projeto-com-nodeJs.git
+npm install 
+npm run dev
+npm test para rodar os testes unitarios
+
 Endpoints da API
 A documentação completa da API com os endpoints disponíveis está disponível no Swagger.
 
 Referência
-Este projeto é um desafio do Coodesh. Você pode encontrar o desafio original aqui.
+Este projeto é um desafio do Coodesh.
