@@ -2,7 +2,7 @@
 Descrição
 Este projeto é uma API de gerenciamento de produtos, que permite realizar operações como recuperar informações de produtos por código, atualizar detalhes de produtos existentes, excluir produtos e listar todos os produtos cadastrados.
 
-#Tecnologias Utilizadas
+# Tecnologias Utilizadas
   -Node.js
   -Express.js
   -MongoDB
