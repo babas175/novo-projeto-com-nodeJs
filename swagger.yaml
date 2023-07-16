@@ -1,0 +1,113 @@
+openapi: 3.0.3
+info:
+  title: Minha API de Produtos
+  description: API para gerenciar produtos
+  version: 1.0.0
+
+paths:
+  /products/{code}:
+    get:
+      summary: Recuperar um produto por código
+      description: Retorna as informações de um produto com base no código fornecido.
+      parameters:
+        - name: code
+          in: path
+          description: Código do produto a ser recuperado
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Produto encontrado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '404':
+          description: Produto não encontrado
+
+    put:
+      summary: Atualizar um produto por código
+      description: Atualiza as informações de um produto com base no código fornecido.
+      parameters:
+        - name: code
+          in: path
+          description: Código do produto a ser atualizado
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Informações atualizadas do produto
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        '200':
+          description: Produto atualizado com sucesso
+        '404':
+          description: Produto não encontrado
+
+  /products:
+    post:
+      summary: Criar um novo produto
+      description: Cria um novo produto com as informações fornecidas.
+      requestBody:
+        description: Informações do novo produto
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        '201':
+          description: Produto criado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+    get:
+      summary: Listar todos os produtos
+      description: Retorna uma lista de todos os produtos cadastrados.
+      parameters:
+        - name: page
+          in: query
+          description: Página a ser exibida
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - name: limit
+          in: query
+          description: Limite de produtos por página
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 10
+      responses:
+        '200':
+          description: Lista de produtos retornada com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        code:
+          type: integer
+        product_name:
+          type: string
+        categories:
+          type: array
+          items:
+            type: string
