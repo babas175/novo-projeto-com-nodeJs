@@ -1,3 +1,12 @@
+# Backend Challenge 20230105
+
+## Introdução
+
+Nesse desafio trabalharemos no desenvolvimento de uma REST API para utilizar os dados do projeto Open Food Facts, que é um banco de dados aberto com informação nutricional de diversos produtos alimentícios.
+
+O projeto tem como objetivo dar suporte a equipe de nutricionistas da empresa Fitness Foods LC para que eles possam revisar de maneira rápida a informação nutricional dos alimentos que os usuários publicam pela aplicação móvel.
+
+
 Desafio Coodesh - API de Gerenciamento de Produtos
 Descrição
 Este projeto é uma API de gerenciamento de produtos, que permite realizar operações como recuperar informações de produtos por código, atualizar detalhes de produtos existentes, excluir produtos e listar todos os produtos cadastrados.
